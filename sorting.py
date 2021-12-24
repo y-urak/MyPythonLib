@@ -1,6 +1,6 @@
 import itertools
-
-#1 順列の例
+#別のPCテスト
+##1 順列の例
 def permutation(list):
     for p in itertools.permutations(list):
         for a in p:
