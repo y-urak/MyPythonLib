@@ -1,0 +1,4 @@
+# 重複しない条件で確認する場合→チェックした配列の値を変えておくのが割と楽
+# https://atcoder.jp/contests/abc065/submissions/28104912
+# 最初の一列 → 最後の一列 いくつ移動させたかをチェックしてみる
+# https://atcoder.jp/contests/agc029/submissions/28106075
