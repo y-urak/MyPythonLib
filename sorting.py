@@ -14,3 +14,5 @@ if __name__ =='__main__':
 
 #1 https://algo-logic.info/permutation/#toc_id_2_2
 # https://atcoder.jp/contests/abc232/editorial/3143
+# 重複しない条件で確認する場合→チェックした配列の値を変えておくのが割と楽
+# https://atcoder.jp/contests/abc065/submissions/28104912

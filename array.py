@@ -32,12 +32,15 @@ ablist=alist+blist
 cnter = Counter(ablist)
 # もしcがあればcのカウントをプラス1する、そうでなければ新しく項目を作ってプラス1
 cnter["c"] += 1 
-## 4 sum -> リストやタプルの合計
+
+##4 sum -> リストやタプルの合計
 totalab=sum(cnter.values())
 print(ablist,cnter,"->",totalab)
 # カウントした数字がいらない人向け
 print(list(cnter),set(ablist),list(set(ablist)))
 
+##5 pop ->　pop連続して使う場合に注意
+print(ablist.pop(0),ablist.pop(0),ablist)
 
 #--------------------------------------------------------------------
 #1 https://blog.pyq.jp/entry/Python_kaiketsu_180420
@@ -48,5 +51,7 @@ print(list(cnter),set(ablist),list(set(ablist)))
 #3 https://memoribuka-lab.com/?p=2203
 
 #4 https://flytech.work/blog/21452/#sum-2
+
+#5 https://note.nkmk.me/python-list-clear-pop-remove-del/
 
 # https://atcoder.jp/contests/abc232/editorial/3143

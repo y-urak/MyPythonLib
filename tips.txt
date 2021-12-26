@@ -2,3 +2,5 @@
 # https://atcoder.jp/contests/abc065/submissions/28104912
 # 最初の一列 → 最後の一列 いくつ移動させたかをチェックしてみる
 # https://atcoder.jp/contests/agc029/submissions/28106075
+# それぞれの操作について計算してみた配列を用意して、その配列同士の最大値をとる
+# https://atcoder.jp/contests/agc040/submissions/28163300
