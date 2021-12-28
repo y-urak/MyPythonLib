@@ -20,10 +20,26 @@ def no1(N,A,B,s):
     else:
         print("No")
 
+#予め用意しておくversion
+def no2():
+    N, M = map(int, input().split())
+    #二次行列の空白行列の作り方
+    G = [[] for i in range(N)]
+    for i in range(M):
+        A, B = map(int, input().split())
+        # appendで追加する→順不同にlistに追加
+        G[A].append(B)
 
-
-
-
+    for i in range(N):
+        ans=""
+        #並べるためのソート
+        G[i].sort()
+        for xx in range(N):
+            if ans=="":
+                ans+=str(xx)
+            else:
+                ans+=" "+str(xx)
+        print(ans)
 
 
 #1 https://algo-method.com/tasks/411/editorial
