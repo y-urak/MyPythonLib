@@ -42,6 +42,11 @@ print(list(cnter),set(ablist),list(set(ablist)))
 ##5 pop ->　pop連続して使う場合に注意
 print(ablist.pop(0),ablist.pop(0),ablist)
 
+##6 *演算子(iterable unpacking operator) -> 表示するものをまとめたものを小分けにする
+print(type(range(4)),range(4),*range(4))
+print(*"iterable")
+print(*[1,2,3,10],*(11,12,13))
+
 #--------------------------------------------------------------------
 #1 https://blog.pyq.jp/entry/Python_kaiketsu_180420
 
@@ -53,5 +58,7 @@ print(ablist.pop(0),ablist.pop(0),ablist)
 #4 https://flytech.work/blog/21452/#sum-2
 
 #5 https://note.nkmk.me/python-list-clear-pop-remove-del/
+
+#6 https://qiita.com/eumesy/items/dda85b70d28da61663cb
 
 # https://atcoder.jp/contests/abc232/editorial/3143
