@@ -47,6 +47,12 @@ print(type(range(4)),range(4),*range(4))
 print(*"iterable")
 print(*[1,2,3,10],*(11,12,13))
 
+##7 reverse、配列の反転
+rev=[0]*2+[3]*5
+#今ある配列の反転であることに注意
+rev.reverse()
+print(rev)
+
 #--------------------------------------------------------------------
 #1 https://blog.pyq.jp/entry/Python_kaiketsu_180420
 
@@ -60,5 +66,7 @@ print(*[1,2,3,10],*(11,12,13))
 #5 https://note.nkmk.me/python-list-clear-pop-remove-del/
 
 #6 https://qiita.com/eumesy/items/dda85b70d28da61663cb
+
+#7 https://note.nkmk.me/python-reverse-reversed/
 
 # https://atcoder.jp/contests/abc232/editorial/3143

@@ -1,3 +1,19 @@
+##3 累積和　動的計画法
+A = [3,1,4,1,5,9,2,6] 
+N=len(A)
+# 配列の初期化
+T = [0] * N
+
+# 初期値を定める (T[0] は 0 に設定済み)
+# 確定で決まる部分は値を入れる
+T[1] = A[1]
+
+# 順に計算していく -> 今回は二パターンのやつで小さい方を入れる
+for i in range(2, N):
+    T[i] = min(T[i-1] + A[i], T[i-2] + A[i] * 2)
+print(T[-1])
+
+
 
 import sys
 # 再帰関数の呼び出し制限 -> 計算数を気にする場合には書いとくべき
@@ -69,5 +85,7 @@ print("NO")
 
 #2 https://qiita.com/takayg1/items/05d33193fbd7f2fc9256
 #bfs -> 最初のbfs->*dfs(x+1,y),*dfs(x,y+1),*dfs(x-1,y),*dfs(x,y-1) -> **dfs()....
+
+#3 https://algo-method.com/tasks/303/editorial
 
 #入力-> https://paiza.jp/student/challenges/482/retry
