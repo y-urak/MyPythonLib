@@ -51,10 +51,16 @@ print(*[1,2,3,10],*(11,12,13))
 rev=[0]*2+[3]*5
 #今ある配列の反転であることに注意
 rev.reverse()
-print(rev)
+##8 ついでに並び替え→sortedは返す
+print(sorted(rev),rev)
+#今ある配列の反転...
+rev.sort()
+print(rev,rev.sort())
 
-##8 insert 好きなところに好きなものを入れれる,置き換えではない
+
+##9 insert 好きなところに好きなものを入れれる,置き換えではない
 rev.insert(5,-1)
+rev.insert(2,-1)
 print(rev)
 
 #--------------------------------------------------------------------
@@ -74,5 +80,7 @@ print(rev)
 #7 https://note.nkmk.me/python-reverse-reversed/
 
 #8 https://www.javadrive.jp/python/list/index7.html
+
+#9 https://www.javadrive.jp/python/list/index7.html
 
 # https://atcoder.jp/contests/abc232/editorial/3143

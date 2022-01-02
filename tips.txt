@@ -4,3 +4,5 @@
 # https://atcoder.jp/contests/agc029/submissions/28106075
 # それぞれの操作について計算してみた配列を用意して、その配列同士の最大値をとる
 # https://atcoder.jp/contests/agc040/submissions/28163300
+# Bは全探索パターンを考えるのが良い
+# https://atcoder.jp/contests/keyence2019/tasks/keyence2019_b
