@@ -1,4 +1,4 @@
-#1 二次配列に情報を格納しておくのがポイント
+## 1 二次配列に情報を格納しておくのがポイント
 #[] -> [[]] ->[[],[]] 横に入れていくパターン
 #文字列であれば一次配列に入れておけば参照は楽 A=["abb","bba"] -> A[0][1]="b"
 def no1(N,A,B,s):
@@ -44,3 +44,15 @@ def no2():
 
 #1 https://algo-method.com/tasks/411/editorial
 # https://algo-method.com/lecture_groups/19
+
+## 2 根→葉　→葉のスタートから根にもどるのは簡単　=> 深さは割と簡単に出せる
+def depthcalc(x,a_list):
+    #0番目がないので作っておく（大事）->0が根
+    a_list.insert(0,1)
+    depth=0
+    while True:
+        if x==0:
+            break
+        x=a_list[x]
+        depth+=1
+    return depth

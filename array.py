@@ -58,6 +58,11 @@ rev.sort()
 print(rev,rev.sort())
 
 
+##9 insert 好きなところに好きなものを入れれる,置き換えではない
+rev.insert(5,-1)
+rev.insert(2,-1)
+print(rev)
+
 #--------------------------------------------------------------------
 #1 https://blog.pyq.jp/entry/Python_kaiketsu_180420
 
@@ -74,6 +79,8 @@ print(rev,rev.sort())
 
 #7 https://note.nkmk.me/python-reverse-reversed/
 
-#8 https://note.nkmk.me/en/python-list-sort-sorted/
+#8 https://www.javadrive.jp/python/list/index7.html
+
+#9 https://www.javadrive.jp/python/list/index7.html
 
 # https://atcoder.jp/contests/abc232/editorial/3143
