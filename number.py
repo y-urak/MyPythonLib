@@ -45,11 +45,35 @@ print("GCD",GCD(24,40))
 #三つの場合のGCDの出し方
 print("GCD",GCD(GCD(24,40),60))
 
+#期待値->値*確率の総和
+def dice_exceptation(dice_list=[1,2,3,4,5,6]):
+    probability=1/len(dice_list)
+    ex = 0
+    for dice in dice_list:
+        ex+=dice*probability
+    return ex
+print(dice_exceptation())
+#期待値の線形性->それぞれの試行の期待値の総和が答え
+# 2個のサイコロの総和
+##2 期待値について
+print(dice_exceptation()+dice_exceptation())
+
+import random
+#モンテカルロ法->確率がわからないとき実際に試行を繰り返すことで実際の確率を推定することができる
+def calc_PI(n=1000):
+    cnt=0
+    for i in range(n):
+        x=random.random()
+        y=random.random()
+        if x*x + y*y <=1:
+            cnt+=1
+    return 4*cnt/n
+print(calc_PI(100000))
 
 #大きい値の作り方
 num1=1e9
 num2=(10**9)
-#1
+##1
 num3=float('inf')
 print(num1)
 print(num2)
@@ -58,3 +82,4 @@ print(num3)
 
 
 #1 https://qiita.com/You-Tarin/items/eebdc39c6f8ffd2770f0
+#2 https://mathwords.net/saikorokitaichi
