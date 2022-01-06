@@ -21,6 +21,21 @@ def permutation_num(n):
         retval*=i
     return retval
 
+# [1,2,3,4,5]
+def select_sort(sorting_list):
+    for i in range(len(sorting_list)):
+        for j in range(i,len(sorting_list)):
+            if sorting_list[i]>sorting_list[j]:
+                tmp=sorting_list[i]
+                sorting_list[i]=sorting_list[j]
+                sorting_list[j]=tmp
+    return sorting_list
+#TODO
+def merge_sort(start_i,end_i):
+    global sort_list
+    if end_i==start_i:
+        return 
+    merge_sort()
     
 
 #range(n)->[0,.......,n-1]
@@ -32,7 +47,10 @@ if __name__ =='__main__':
     print(permutation_num(4)/permutation_num(2))
     #4C2 ->n/r*n-r
     print(permutation_num(4)/permutation_num(2)/permutation_num(2))
+    
+    print([4,3,2,44,1],select_sort([4,3,2,44,1]))
 
+    sort_list=[6,2,66,9,0,3,8,11]
 
 #1 https://algo-logic.info/permutation/#toc_id_2_2
 # https://atcoder.jp/contests/abc232/editorial/3143
