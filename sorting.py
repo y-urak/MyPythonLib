@@ -31,12 +31,37 @@ def select_sort(sorting_list):
                 sorting_list[j]=tmp
     return sorting_list
 #TODO
-def merge_sort(start_i,end_i):
-    global sort_list
-    if end_i==start_i:
-        return 
-    merge_sort()
-    
+def merge_sort(sort_list,start_i,end_i):
+    #配列の大きさが2以上で比較と結合した配列を渡すことができる
+    if start_i+1<end_i:
+        m = int((start_i + end_i)/2)
+        #半分に分ける
+        merge_sort(sort_list,start_i,m)
+        merge_sort(sort_list,m,end_i)
+        print("merge: ",start_i,m,end_i)
+        #merge ->配列の要素同士の比較とリスト化
+        sort_list[start_i:end_i]=merge(sort_list[start_i:m],sort_list[m:end_i])
+        print(sort_list)
+
+def merge(list_a,list_b):
+    a_i=0
+    b_i=0
+    merged_list=[]
+    for i in range(len(list_a)+len(list_b)):
+        if not (a_i<len(list_a)):
+            merged_list.append(list_b[b_i])
+            b_i+=1
+        elif not (b_i<len(list_b)):
+            merged_list.append(list_a[a_i])
+            a_i+=1
+        elif list_a[a_i]>list_b[b_i]:
+            merged_list.append(list_b[b_i])
+            b_i+=1
+        elif not(list_a[a_i]>list_b[b_i]):
+            merged_list.append(list_a[a_i])
+            a_i+=1
+    return merged_list
+
 
 #range(n)->[0,.......,n-1]
 if __name__ =='__main__':
@@ -51,6 +76,7 @@ if __name__ =='__main__':
     print([4,3,2,44,1],select_sort([4,3,2,44,1]))
 
     sort_list=[6,2,66,9,0,3,8,11]
+    merge_sort(sort_list,0,len(sort_list))
 
 #1 https://algo-logic.info/permutation/#toc_id_2_2
 # https://atcoder.jp/contests/abc232/editorial/3143
