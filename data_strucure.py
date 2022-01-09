@@ -1,3 +1,20 @@
+##4 優先度付きキュー　→最大値と最小値を簡単に出せるすごいやつ
+A=[4,3,6,5,1,2,9]
+import heapq
+#リストを優先度付きキューにする
+heapq.heapify(A)
+#木構造になっている
+print("heaqp",A)
+#追加した要素も順番に並んでいる
+heapq.heappush(A,7)
+print("heaqp",A)
+#最小値の取り出し
+print(heapq.heappop(A))
+#最大値の取り出し
+A=list(map(lambda x: x*(-1), A))  # 各要素を-1倍
+heapq.heapify(A)
+print(heapq.heappop(A)*(-1))
+
 ##3 累積和　動的計画法
 A = [3,1,4,1,5,9,2,6] 
 N=len(A)
@@ -77,8 +94,9 @@ def bfs(x,y):
             queue.append([xx-1,yy])
             queue.append([xx,yy-1])
         
-bfs(*s)
+#bfs(*s)
 print("NO")
+
 
 #1 https://nashidos.hatenablog.com/entry/2020/01/04/234842
 #dfs -> 最初のdfs->*dfs(x+1,y)->[**(x+1,y)->[***(x+1,y)...],**(x-1,y),**(x,y+1),**(x,y-1)],*dfs(x-1,y),*dfs(x,y+1),*dfs(x,y-1)
@@ -87,5 +105,7 @@ print("NO")
 #bfs -> 最初のbfs->*dfs(x+1,y),*dfs(x,y+1),*dfs(x-1,y),*dfs(x,y-1) -> **dfs()....
 
 #3 https://algo-method.com/tasks/303/editorial
+
+#4 https://qiita.com/ell/items/fe52a9eb9499b7060ed6
 
 #入力-> https://paiza.jp/student/challenges/482/retry

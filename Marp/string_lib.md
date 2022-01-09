@@ -88,7 +88,7 @@ s="abbbbbs"
 subs="ooo"
 s[0:start]+ subs + s[start+len(subs):len(s)]
 ```
-後で結合する文字列の始まりを挿入したい文字列分ずらす
+後で結合する文字列の始まりを ***挿入したい文字列分***ずらす
 #### 参考
 https://minus9d.hatenablog.com/entry/20130528/1369745960
 
