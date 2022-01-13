@@ -32,4 +32,21 @@ def solv3():
     print(ans[5])
 solv3()
 
+def solv4():
+    n=6
+    dp=[[-1]*n for _ in range(n)]
+    dp[0][0]=1
+    dp[2][2]=0
+    dp[1][5]=0
+    for i in range(len(dp)):
+        for j in range(len(dp[0])):
+            if dp[i][j]==-1:
+                dp[i][j]=0
+                if j-1>=0:
+                    dp[i][j]+=dp[i][j-1]
+                if i-1>=0:
+                    dp[i][j]+=dp[i-1][j]
+        print(dp[i])
+solv4()
+
 # https://github.com/E869120/math-algorithm-book/blob/main/editorial/chap3-7/chap3-7.pdf
