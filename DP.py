@@ -49,4 +49,15 @@ def solv4():
         print(dp[i])
 solv4()
 
-# https://github.com/E869120/math-algorithm-book/blob/main/editorial/chap3-7/chap3-7.pdf
+def solv6(n,l):
+    ll = [0]*n
+    ll[0]=l[0]
+    ll[1]=max(ll[0],l[1])
+    for i in range(2,n):
+        ll[i]=max(ll[i-1],l[i]+ll[i-2])
+    print(ll)
+solv6(5,[2,5,3,3,1])
+
+# https://github.com/E869120/math-algor
+# 
+# ithm-book/blob/main/editorial/chap3-7/chap3-7.pdf
