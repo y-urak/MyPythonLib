@@ -1,3 +1,23 @@
+##10 defaultdict
+from collections import defaultdict
+s = 'mississippi'
+# mのdict内で返す形の指定？
+# defaultdict(int) -> intを返す
+# defaultdict(list) -> listを返す
+ddi = defaultdict(int)
+ddl = defaultdict(list)
+#print(d.default_factory)
+iter_int=0
+for k in s:
+    ddi[k] += 1
+    ddl[k].append(iter_int)
+    iter_int+=1
+#print(d.items(),d)
+print("int",ddi)
+print("list",ddl)
+#該当しない内容の場合 int -> 0回出てきた, list -> 要素のないリストを返す
+print(ddi['a'],ddl['a'])
+
 n=5
 
 ##1 _ は使わない変数として定義されることが多い
@@ -82,5 +102,7 @@ print(rev)
 #8 https://www.javadrive.jp/python/list/index7.html
 
 #9 https://www.javadrive.jp/python/list/index7.html
+
+#10 https://stackoverflow.com/questions/5900578/how-does-collections-defaultdict-work
 
 # https://atcoder.jp/contests/abc232/editorial/3143

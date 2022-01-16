@@ -41,7 +41,7 @@ a = [[False] * n for _ in range(n)]
 https://blog.pyq.jp/entry/Python_kaiketsu_180420
 
 ---
-# 辞書型配列
+# 辞書型配列 → P12 連想行列
 文字列を引数として利用できる配列
 ##### 引数と中身の代入(1): ```dict={"apple":0}```
 ##### 引数と中身の代入(2): ```dict["banana"]=1```
@@ -120,3 +120,24 @@ ex 配列:list
 
 #### 参考
 https://www.javadrive.jp/python/list/index7.html
+
+---
+# 連想行列 defaultdict()
+
+- 初期化の仕方で使い方が変わる
+  - ex 'mississippi'
+  - ```defaultdict(int)```で初期化
+    - ``` {'m': 1, 'i': 4, 's': 4, 'p': 2})```
+  - ```defaultdict(list)```で初期化
+    - ```{'m': [0], 'i': [1, 4, 7, 10], 's': [2, 3, 5, 6], 'p': [8, 9]}```
+- 辞書型よりも使いやすい
+  - 全ての値を初期化できる(default) -> 例より 
+      - ```defaultdict(int)``` -> 0で初期化
+      -  ```defaultdict(list)``` -> []で初期化
+      - 参照時に値がなくてもエラーを吐かない
+
+---
+# 参考
+- http://arduinopid.web.fc2.com/Q3-30.html
+- https://stackoverflow.com/questions/5900578/how-does-collections-defaultdict-work
+- https://atcoder.jp/contests/abc235/editorial/3256
