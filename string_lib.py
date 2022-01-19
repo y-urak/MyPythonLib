@@ -58,6 +58,16 @@ def string_format3(n=10):
     print(i2)
     print(i3)
 
+#6 改行しない出力について
+def about_print(s="this is test"):
+    # いつもの
+    print(s)
+    # 本来の形
+    print(s,end='\n')
+    # つまり文字列の後の出力についてを指定できるようになっている
+    print(s,end=' ...?')
+    print(s,end=' program.\n')
+
 #テストコード
 if __name__ =='__main__':
     print(changeCharToAscii('a'),changeAsciiToChar(97))
@@ -68,9 +78,11 @@ if __name__ =='__main__':
     print(string_format1())
     print(string_format2())
     string_format3()
+    about_print()
 
 #1 https://qiita.com/ell/items/6eb48e934a147898d823
 #2 https://it-engineer-info.com/language/python/5664/
 #3 https://note.nkmk.me/python-str-compare/#:~:text=source%3A%20str_compare.py-,%E9%83%A8%E5%88%86%E4%B8%80%E8%87%B4%3A%20in%2C%20not%20in,%E3%81%A8%20False%20%E3%81%8C%E8%BF%94%E3%81%95%E3%82%8C%E3%82%8B%E3%80%82
 #4 https://minus9d.hatenablog.com/entry/20130528/1369745960
 #5 https://gammasoft.jp/blog/python-string-format/
+#6 https://techacademy.jp/magazine/22292
