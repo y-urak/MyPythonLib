@@ -107,3 +107,10 @@ https://minus9d.hatenablog.com/entry/20130528/1369745960
 
 ---
 # print()に隠された引数
+- いつもの形 ```print(s)```
+  - 第二引数が省略されている
+  - 本来の形 ```print(s,end='\n')```
+    - 文字列の後の出力についてを指定できる
+      - 例：```print(s,end=' ...?')```
+      - 例：```print(s,end=' program.\n')```
+<!-- footer: 2022 1/23 -->
