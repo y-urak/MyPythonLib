@@ -5,6 +5,9 @@ D:\pythonProject\Web_Scraping\venv\Scripts\python.exe Selenium/screenshot_using_
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
 
 def screenshot_kinokuniya(URL,file_name_output):
     profile_path="C:/Users/xxbia/AppData/Local/Google/Chrome/User Data/Profile 2"
@@ -20,7 +23,9 @@ def screenshot_kinokuniya(URL,file_name_output):
 
     # ほしい情報を取り出す
     # https://kurozumi.github.io/selenium-python/locating-elements.html
-    driver.implicitly_wait(30)
+    # 明示的に待機時間を指定する　→複数回ループを回すのできちんと読み込まれた後に情報を抜き出すようにする
+    # https://office54.net/python/scraping/selenium-wait-time
+    WebDriverWait(driver,5).until(EC.visibility_of_element_located((By.XPATH, '//*[@id="root"]/div[2]/div[1]/figure/img')))
     # XPATHで指定するのが楽　開発者ツールでコピペ可能
     # https://www.octoparse.jp/blog/xpath-introduction/
     img2 = driver.find_element(By.XPATH,'//*[@id="root"]/div[2]/div[1]/figure/img')
